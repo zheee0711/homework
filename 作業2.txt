@@ -1,0 +1,22 @@
+def truth_table():
+    
+    print("|  P  |  Q  | P ∧ Q | P ∨ Q | P → Q | P ← Q | P ↔ Q |")
+    print("+-----+-----+-------+-------+-------+-------+-------+")
+
+
+    for p in [False, True]:
+        for q in [False, True]:
+            
+            p_and_q = p and q
+            p_or_q = p or q
+            p_implies_q = (not p) or q
+            q_implies_p = (not q) or p
+            p_iff_q = p == q
+
+            
+            print(f"|  {int(p)}  |  {int(q)}  |   {int(p_and_q)}   |   {int(p_or_q)}   |   {int(p_implies_q)}   |   {int(q_implies_p)}   |   {int(p_iff_q)}   |")
+
+    print("+-----+-----+-------+-------+-------+-------+-------+")
+
+
+truth_table()
